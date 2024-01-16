@@ -1,3 +1,5 @@
+![image](https://github.com/Ghosts6/search-name-in-arrays-with-binary-search-algorithm/assets/95994481/4809da9f-97ed-44ac-8c28-d2a930931be6)
+
 #✔️ search-name-in-arrays-with-binary-search-algorithm
 
 search array with binary search algorithm in c++
