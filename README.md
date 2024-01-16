@@ -1,4 +1,4 @@
-![(https://www.kiarashbashokian.com/)](https://github.com/Ghosts6/search-name-in-arrays-with-binary-search-algorithm/assets/95994481/4809da9f-97ed-44ac-8c28-d2a930931be6)
+!(https://www.kiarashbashokian.com/)(https://github.com/Ghosts6/search-name-in-arrays-with-binary-search-algorithm/assets/95994481/4809da9f-97ed-44ac-8c28-d2a930931be6)
 
 #✔️ search-name-in-arrays-with-binary-search-algorithm
 
