@@ -1,5 +1,7 @@
 #✔️ search-name-in-arrays-with-binary-search-algorithm
 
+![images](https://github.com/Ghosts6/search-name-in-arrays-with-binary-search-algorithm/assets/95994481/0eca835a-56ed-43d7-a0d1-59d24135fa4f)
+
 search array with binary search algorithm in c++
 
 # Builtin function 'binary_search()':
