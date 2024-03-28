@@ -152,3 +152,10 @@ int jump_search(int arr[], int x, int y) {
     return -1;
 }
 ```
+
+# LinerSearch:
+
+![linear_search(1)](https://github.com/Ghosts6/binary-search-algorithm/assets/95994481/2510a479-6135-4ad0-aabf-32ebb2723613)
+
+Linear search is a simple algorithm for finding an element in an array or list. It works by sequentially checking each element in the array until the target element is found or the end of the array is reached. It starts from the beginning of the array and compares each element with the target element. If a match is found, the search is successful, and the index of the element is returned. If the target element is not found after checking all elements, the search fails. Linear search is easy to implement and works well for small arrays, but its time complexity is O(n), where n is the number of elements in the array, making it inefficient for large datasets compared to binary search or other more efficient search algorithms.
+
