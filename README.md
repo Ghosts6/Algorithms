@@ -1,13 +1,13 @@
 ![image](https://github.com/Ghosts6/search-name-in-arrays-with-binary-search-algorithm/assets/95994481/4809da9f-97ed-44ac-8c28-d2a930931be6)
 
-#✔️ search-name-in-arrays-with-binary-search-algorithm
+#✔️Binary search:
 
-![images](https://github.com/Ghosts6/search-name-in-arrays-with-binary-search-algorithm/assets/95994481/0eca835a-56ed-43d7-a0d1-59d24135fa4f)earch array with 
+![images](https://github.com/Ghosts6/search-name-in-arrays-with-binary-search-algorithm/assets/95994481/0eca835a-56ed-43d7-a0d1-59d24135fa4f)
 
 Binary search is an efficient algorithm for finding an element in a sorted array. It works by repeatedly dividing the search interval in half until the target element is found or the interval is empty. It starts by comparing the target element with the middle element of the array. If they match, the search is successful. If the target element is smaller, the search continues on the left half of the array; if larger, it continues on the right half. This process repeats until the element is found or the interval is empty. Binary search is significantly faster than linear search for large arrays because it eliminates half of the remaining elements in each step, resulting in a logarithmic time complexity.
 
 
-# Builtin function 'binary_search()':
+#Builtin function 'binary_search()':
 
 ```cpp
 // binary search with builtin function binary_search()
@@ -94,7 +94,7 @@ int binary(string arr[],string Sname,int Size){
 
 ```
 
-# JumpsSearch
+# JumpsSearch:
 
 ![jump_search](https://github.com/Ghosts6/binary-search-algorithm/assets/95994481/3d5dc8e7-5800-44cd-824a-3287cca5f016)
 
