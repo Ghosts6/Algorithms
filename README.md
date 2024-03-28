@@ -159,3 +159,40 @@ int jump_search(int arr[], int x, int y) {
 
 Linear search is a simple algorithm for finding an element in an array or list. It works by sequentially checking each element in the array until the target element is found or the end of the array is reached. It starts from the beginning of the array and compares each element with the target element. If a match is found, the search is successful, and the index of the element is returned. If the target element is not found after checking all elements, the search fails. Linear search is easy to implement and works well for small arrays, but its time complexity is O(n), where n is the number of elements in the array, making it inefficient for large datasets compared to binary search or other more efficient search algorithms.
 
+Linear_search.cpp
+```cpp
+# include <iostream>
+# include <cmath>
+using namespace std;
+
+int linear_search(int arr[], int x, int y);
+
+int main(){
+    int choice, arr_size, index_number;
+    int arr[] = {1, 2, 3, 4, 7, 10, 20, 40};
+    
+    cout << "\t\t\tlinear search algorithm\t\t\t\n";
+    for (int i = 0; i < 8; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << '\n' << "please select one of array element to check index number with linear search algorithm" << endl;
+    cin >> choice;
+
+    arr_size = sizeof(arr) / sizeof(arr[0]);
+    index_number = linear_search(arr, choice, arr_size);
+
+    if (index_number != -1)
+        cout << "Number " << choice << " has index number of " << index_number << endl;
+    else
+        cout << "Number " << choice << " not found in the array." << endl;
+
+    return 0;
+}
+
+int linear_search(int arr[], int x, int y){
+    for (int i = 0; i < y; i++)
+        if (arr[i] == x)
+            return i;
+    return -1;
+}
+```
