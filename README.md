@@ -250,3 +250,119 @@ void print_array(int arr[],int x){
 	}	
 }
 ```
+# Dijkstra :
+
+![dijkstra](https://github.com/Ghosts6/searchAlgorithms/assets/95994481/040b8c3e-730e-49bd-99df-a2237c7c48c8)
+
+Dijkstra's algorithm finds the shortest path from one vertex to all other vertices. It does so by repeatedly selecting the nearest unvisited vertex and calculating the distance to all the unvisited neighboring vertices
+
+dijkstra.cpp:
+```cpp
+#include <iostream>
+#include <vector>
+#include <queue>
+#include <climits>
+
+using namespace std;
+#define INF INT_MAX
+
+// Structure to represent a node
+struct Node {
+    int vertex,distance;
+    Node(int v, int d) : vertex(v), distance(d) {}
+    bool operator<(const Node& other) const {
+        return distance > other.distance;
+    }
+};
+
+// Dijkstra's algorithm function
+void dijkstra(vector<vector<pair<int, int>>>& graph, int source) {
+    int V = graph.size();
+    vector<int> dist(V, INF);
+    priority_queue<Node> pq;
+    pq.push(Node(source, 0));
+    dist[source] = 0;
+
+    while (!pq.empty()) {
+        int u = pq.top().vertex;
+        pq.pop();
+
+        for (auto& neighbor : graph[u]) {
+            int v = neighbor.first;
+            int weight = neighbor.second;
+
+            if (dist[v] > dist[u] + weight) {
+                dist[v] = dist[u] + weight;
+                pq.push(Node(v, dist[v]));
+            }
+        }
+    }
+    // Printing the shortest distances
+    cout << "Shortest distances from source " << source << ":\n";
+    for (int i = 0; i < V; ++i) {
+        cout << "Vertex " << i << ": " << dist[i] << endl;
+    }
+}
+
+int main() {
+    int vertices,edge,source;
+    cout << "Enter the number of vertices and edges: ";
+    cin >> vertices >> edge;
+    // Create a graph
+    vector<vector<pair<int, int>>> graph(vertices);
+    cout << "Enter the edges (source destination weight):\n";
+    for (int i = 0; i < edge; ++i) {
+        int current_node,neighbor_node,edge_weight;
+        cin >> current_node >> neighbor_node >> edge_weight;
+        graph[current_node].push_back({neighbor_node, edge_weight});
+        graph[neighbor_node].push_back({current_node, edge_weight});
+    }
+    cout << "Enter the source vertex: ";
+    cin >> source;
+    dijkstra(graph, source);
+    return 0;
+}
+```
+dijkstra.py
+```py
+import heapq
+
+INF = float('inf')
+
+# Dijkstra's algorithm function
+def dijkstra(graph, source):
+    V = len(graph)
+    dist = [INF] * V
+    pq = []
+    heapq.heappush(pq, (0, source))
+    dist[source] = 0
+
+    while pq:
+        d, u = heapq.heappop(pq)
+
+        for v, weight in graph[u]:
+            if dist[v] > dist[u] + weight:
+                dist[v] = dist[u] + weight
+                heapq.heappush(pq, (dist[v], v))
+
+    # Printing the shortest distances
+    print("Shortest distances from source", source, ":")
+    for i in range(V):
+        print("Vertex", i, ":", dist[i])
+
+# Main function
+if __name__ == "__main__":
+    vertices,edge = map(int, input("Enter the number of vertices and edges: ").split())
+
+    # Create a graph as an adjacency list
+    graph = [[] for _ in range(vertices)]
+    print("Enter the edges (source destination weight):")
+    for _ in range(edge):
+        current_node,neighbor_node,edge_weight = map(int, input().split())
+        graph[current_node].append((neighbor_node, edge_weight))
+        graph[neighbor_node].append((current_node, edge_weight))  
+
+    source = int(input("Enter the source vertex: "))
+
+    dijkstra(graph, source)
+```
