@@ -370,7 +370,7 @@ if __name__ == "__main__":
 ```
 ## 🧩 Breadth-First Search (BFS):
 
-![bfs](https://github.com/Ghosts6/searchAlgorithms/assets/95994481/bfs-icon.png)
+![bfs](https://github.com/user-attachments/assets/63848a93-49a6-45ca-8566-55ced0d8ddd2)
 
 Breadth-First Search (BFS) is a graph traversal algorithm that explores the vertices of a graph in breadthward motion. It starts from a given source vertex and explores all its neighboring vertices at the present depth level before moving on to vertices at the next depth level. BFS uses a queue to keep track of the next vertex to visit and ensures that each vertex is visited exactly once. It is particularly useful for finding the shortest path in unweighted graphs and for exploring all reachable nodes.
 
