@@ -1,13 +1,15 @@
 ![image](https://github.com/Ghosts6/search-name-in-arrays-with-binary-search-algorithm/assets/95994481/4809da9f-97ed-44ac-8c28-d2a930931be6)
 
-#✔️Binary search:
+# Algorithms
+
+## Binary Search ✔️
 
 ![images](https://github.com/Ghosts6/search-name-in-arrays-with-binary-search-algorithm/assets/95994481/0eca835a-56ed-43d7-a0d1-59d24135fa4f)
 
 Binary search is an efficient algorithm for finding an element in a sorted array. It works by repeatedly dividing the search interval in half until the target element is found or the interval is empty. It starts by comparing the target element with the middle element of the array. If they match, the search is successful. If the target element is smaller, the search continues on the left half of the array; if larger, it continues on the right half. This process repeats until the element is found or the interval is empty. Binary search is significantly faster than linear search for large arrays because it eliminates half of the remaining elements in each step, resulting in a logarithmic time complexity.
 
 
-#Builtin function 'binary_search()':
+###  Builtin function 'binary_search()':
 
 ```cpp
 // binary search with builtin function binary_search()
@@ -30,7 +32,7 @@ int main() {
   return 0;
 }
 ```
-#Without Builtin function:
+### Without Builtin function:
 ```cpp
 #include <iostream>
 #include <algorithm>
@@ -94,7 +96,7 @@ int binary(string arr[],string Sname,int Size){
 
 ```
 
-# JumpsSearch:
+## JumpsSearch🏃:
 
 ![jump_search](https://github.com/Ghosts6/binary-search-algorithm/assets/95994481/3d5dc8e7-5800-44cd-824a-3287cca5f016)
 
@@ -153,7 +155,7 @@ int jump_search(int arr[], int x, int y) {
 }
 ```
 
-# LinerSearch:
+## LinerSearch🔍:
 
 ![linear_search(1)(1)](https://github.com/Ghosts6/binary-search-algorithm/assets/95994481/81d70870-c55e-47ed-86eb-f46e5f32a685)
 
@@ -197,7 +199,7 @@ int linear_search(int arr[], int x, int y){
 }
 ```
 
-# BubbleSort:
+## BubbleSort🍾:
 
 ![working-of-bubble-sort-algorithm-ezgif com-webp-to-png-converter](https://github.com/Ghosts6/searchAlgorithms/assets/95994481/7338a7d1-86d4-4697-80a8-420596350307)
 
@@ -250,13 +252,13 @@ void print_array(int arr[],int x){
 	}	
 }
 ```
-# Dijkstra :
+## Dijkstra🚀:
 
 ![dijkstra](https://github.com/Ghosts6/searchAlgorithms/assets/95994481/040b8c3e-730e-49bd-99df-a2237c7c48c8)
 
 Dijkstra's algorithm finds the shortest path from one vertex to all other vertices. It does so by repeatedly selecting the nearest unvisited vertex and calculating the distance to all the unvisited neighboring vertices
 
-dijkstra.cpp:
+### dijkstra.cpp:
 ```cpp
 #include <iostream>
 #include <vector>
@@ -323,7 +325,7 @@ int main() {
     return 0;
 }
 ```
-dijkstra.py
+### dijkstra.py
 ```py
 import heapq
 
@@ -366,3 +368,67 @@ if __name__ == "__main__":
 
     dijkstra(graph, source)
 ```
+## 🧩 Breadth-First Search (BFS):
+
+![bfs](https://github.com/Ghosts6/searchAlgorithms/assets/95994481/bfs-icon.png)
+
+Breadth-First Search (BFS) is a graph traversal algorithm that explores the vertices of a graph in breadthward motion. It starts from a given source vertex and explores all its neighboring vertices at the present depth level before moving on to vertices at the next depth level. BFS uses a queue to keep track of the next vertex to visit and ensures that each vertex is visited exactly once. It is particularly useful for finding the shortest path in unweighted graphs and for exploring all reachable nodes.
+
+### bfs.cpp
+
+```cpp
+#include <iostream>
+#include <vector>
+#include <queue>
+
+using namespace std;
+
+vector<int> bfs(int start, const vector<vector<int>>& adjList);
+
+// usage
+int main() {
+    // Example graph 
+    vector<vector<int>> adjList = {
+        {1, 2},    // Node 0 is connected to Node 1 and 2
+        {0, 3, 4}, // Node 1 is connected to Node 0, 3, and 4
+        {0, 4},    // Node 2 is connected to Node 0 and 4
+        {1, 5},    // Node 3 is connected to Node 1 and 5
+        {1, 2, 5}, // Node 4 is connected to Node 1, 2, and 5
+        {3, 4}     // Node 5 is connected to Node 3 and 4
+    };
+
+    vector<int> result = bfs(0, adjList);
+
+    cout << "BFS Traversal starting from node 0: ";
+    for (int node : result) {
+        cout << node << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
+
+vector<int> bfs(int start, const vector<vector<int>>& adjList) {
+    int n = adjList.size();
+    vector<int> visited(n, 0);
+    vector<int> traversal;
+    queue<int> q;
+
+    visited[start] = 1;
+    q.push(start);
+
+    while (!q.empty()) {
+        int node = q.front();
+        q.pop();
+        traversal.push_back(node);
+
+        for (int neighbor : adjList[node]) {
+            if (!visited[neighbor]) {
+                visited[neighbor] = 1;
+                q.push(neighbor);
+            }
+        }
+    }
+
+    return traversal;
+}
