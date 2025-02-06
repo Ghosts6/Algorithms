@@ -1,15 +1,14 @@
-![image](https://github.com/Ghosts6/search-name-in-arrays-with-binary-search-algorithm/assets/95994481/4809da9f-97ed-44ac-8c28-d2a930931be6)
+![Ghosts6](https://github.com/Ghosts6/search-name-in-arrays-with-binary-search-algorithm/assets/95994481/4809da9f-97ed-44ac-8c28-d2a930931be6)
 
 # Algorithms
 
 ## Binary Search ✔️
 
-![images](https://github.com/Ghosts6/search-name-in-arrays-with-binary-search-algorithm/assets/95994481/0eca835a-56ed-43d7-a0d1-59d24135fa4f)
+<img src="https://github.com/Ghosts6/search-name-in-arrays-with-binary-search-algorithm/assets/95994481/0eca835a-56ed-43d7-a0d1-59d24135fa4f" alt="BinarySearch" width="400" height="400">
 
 Binary search is an efficient algorithm for finding an element in a sorted array. It works by repeatedly dividing the search interval in half until the target element is found or the interval is empty. It starts by comparing the target element with the middle element of the array. If they match, the search is successful. If the target element is smaller, the search continues on the left half of the array; if larger, it continues on the right half. This process repeats until the element is found or the interval is empty. Binary search is significantly faster than linear search for large arrays because it eliminates half of the remaining elements in each step, resulting in a logarithmic time complexity.
 
-
-###  Builtin function 'binary_search()':
+###  binary_search_with_built_in_function.cpp
 
 ```cpp
 // binary search with builtin function binary_search()
@@ -32,7 +31,9 @@ int main() {
   return 0;
 }
 ```
-### Without Builtin function:
+
+### binary_search_without_builtin_function.cpp
+
 ```cpp
 #include <iostream>
 #include <algorithm>
@@ -98,11 +99,12 @@ int binary(string arr[],string Sname,int Size){
 
 ## JumpsSearch🏃:
 
-![jump_search](https://github.com/Ghosts6/binary-search-algorithm/assets/95994481/3d5dc8e7-5800-44cd-824a-3287cca5f016)
+<img src="https://github.com/Ghosts6/binary-search-algorithm/assets/95994481/3d5dc8e7-5800-44cd-824a-3287cca5f016" alt="JumpSearch" width="400" height="400">
 
 Jump search is an algorithm for finding an element in a sorted array. It works by jumping ahead a fixed number of steps to search for the target element. If the element being searched for is smaller than the current element, it employs linear search within the small range. This process continues until the target element is found or determined to be absent. By jumping ahead, it reduces the number of comparisons compared to linear search, making it more efficient, especially for large arrays.
 
-Jump_search.cpp
+### Jump_search.cpp
+
 ```cpp
 #include <iostream>
 #include <cmath>
@@ -157,11 +159,12 @@ int jump_search(int arr[], int x, int y) {
 
 ## LinerSearch🔍:
 
-![linear_search(1)(1)](https://github.com/Ghosts6/binary-search-algorithm/assets/95994481/81d70870-c55e-47ed-86eb-f46e5f32a685)
+<img src="https://github.com/Ghosts6/binary-search-algorithm/assets/95994481/81d70870-c55e-47ed-86eb-f46e5f32a685" alt="LinearSearch" width="400" height="400">
 
 Linear search is a simple algorithm for finding an element in an array or list. It works by sequentially checking each element in the array until the target element is found or the end of the array is reached. It starts from the beginning of the array and compares each element with the target element. If a match is found, the search is successful, and the index of the element is returned. If the target element is not found after checking all elements, the search fails. Linear search is easy to implement and works well for small arrays, but its time complexity is O(n), where n is the number of elements in the array, making it inefficient for large datasets compared to binary search or other more efficient search algorithms.
 
-Linear_search.cpp
+### linear_search.cpp
+
 ```cpp
 # include <iostream>
 # include <cmath>
@@ -201,11 +204,11 @@ int linear_search(int arr[], int x, int y){
 
 ## BubbleSort🍾:
 
-![working-of-bubble-sort-algorithm-ezgif com-webp-to-png-converter](https://github.com/Ghosts6/searchAlgorithms/assets/95994481/7338a7d1-86d4-4697-80a8-420596350307)
+<img src="https://github.com/Ghosts6/searchAlgorithms/assets/95994481/7338a7d1-86d4-4697-80a8-420596350307" alt="BubbleSort" width="400" height="400">
 
 Bubble sort is a basic algorithm for arranging a string of numbers or other elements in the correct order. The method works by examining each set of adjacent elements in the string, from left to right, switching their positions if they are out of order
 
-Bubble_sort.cpp
+### Bubble_sort.cpp
 ```cpp
 #include <iostream>
 #include <cmath>
@@ -254,11 +257,12 @@ void print_array(int arr[],int x){
 ```
 ## Dijkstra🚀:
 
-![dijkstra](https://github.com/Ghosts6/searchAlgorithms/assets/95994481/040b8c3e-730e-49bd-99df-a2237c7c48c8)
+<img src="https://github.com/Ghosts6/searchAlgorithms/assets/95994481/040b8c3e-730e-49bd-99df-a2237c7c48c8" alt="Dijkstra" width="400" height="400">
 
 Dijkstra's algorithm finds the shortest path from one vertex to all other vertices. It does so by repeatedly selecting the nearest unvisited vertex and calculating the distance to all the unvisited neighboring vertices
 
-### dijkstra.cpp:
+### dijkstra.cpp
+
 ```cpp
 #include <iostream>
 #include <vector>
@@ -325,7 +329,9 @@ int main() {
     return 0;
 }
 ```
+
 ### dijkstra.py
+
 ```py
 import heapq
 
@@ -370,11 +376,11 @@ if __name__ == "__main__":
 ```
 ## 🧩 Breadth-First Search (BFS):
 
-![bfs](https://github.com/user-attachments/assets/63848a93-49a6-45ca-8566-55ced0d8ddd2)
+<img src="https://github.com/user-attachments/assets/63848a93-49a6-45ca-8566-55ced0d8ddd2" alt="BinaryFirstSearch" width="400" height="400">
 
 Breadth-First Search (BFS) is a graph traversal algorithm that explores the vertices of a graph in breadthward motion. It starts from a given source vertex and explores all its neighboring vertices at the present depth level before moving on to vertices at the next depth level. BFS uses a queue to keep track of the next vertex to visit and ensures that each vertex is visited exactly once. It is particularly useful for finding the shortest path in unweighted graphs and for exploring all reachable nodes.
 
-### bfs.cpp
+### breadth_first_search.cpp
 
 ```cpp
 #include <iostream>
@@ -432,3 +438,139 @@ vector<int> bfs(int start, const vector<vector<int>>& adjList) {
 
     return traversal;
 }
+```
+
+## 🏆 Greedy + Parity-based Search Algorithm
+
+<img src="./Greedy_Algorithm.png" alt="Greedy Algorithm" width="400" height="400">
+
+### 📌 Introduction
+
+The **Greedy + Parity-based Search Algorithm** is an approach to solving problems where an optimal choice is made at each step, aiming to find a solution efficiently. 
+
+In this specific problem, we are searching for a 🐱 **cat** inside one of five 📦 **boxes**. However, the cat **moves to an adjacent box (left or right) every night**. Each morning, we can **open one box** to check if the cat is inside.
+
+### 🔍 Comparison with BFS (Breadth-First Search)
+
+| Feature            | 🚀 Greedy + Parity Search | 🌳 BFS (Breadth-First Search) |
+|--------------------|----------------------|---------------------------|
+| **🧠 Strategy**      | Uses a greedy approach combined with parity-based logic | Explores all possible moves level by level |
+| **⚡ Efficiency**    | More efficient for structured problems like this one | Can be inefficient if the search space is large |
+| **🎯 Optimality**    | Not always optimal but works well in constrained environments | Guarantees the shortest path in unweighted graphs |
+| **🛠️ Implementation** | Simple and fast | Requires more memory and computation |
+| **📌 Use Case**      | Problems with predictable movement | General-purpose search problems |
+
+### 🐍 Python Implementation
+
+```python
+import random
+
+def find_cat_greedy(boxes=5, days=10):
+    cat_position = random.randint(0, boxes - 1)  # Cat starts in a random box
+    print(f"Cat starts in box {cat_position}")
+
+    for day in range(days):
+        guess = day % boxes  # Greedy guess based on a pattern
+        print(f"Day {day + 1}: Checking box {guess}")
+
+        if guess == cat_position:
+            print(f"Found the cat in box {guess} on day {day + 1}!")
+            return day + 1
+        
+        # Cat moves left or right randomly
+        if cat_position == 0:
+            cat_position += 1
+        elif cat_position == boxes - 1:
+            cat_position -= 1
+        else:
+            cat_position += random.choice([-1, 1])
+    
+    print("Could not find the cat in given days.")
+    return -1
+
+find_cat_greedy()
+```
+
+## 🎨 Four Color Theorem
+
+<img src="./Four_Color_Theorem.jpg" alt="Four Color Theorem" width="400" height="400">
+
+### 📌 Introduction
+
+The **Four Color Theorem** states that **any map can be colored using at most four colors** in such a way that **no two adjacent regions share the same color**. This theorem applies to maps where each region (such as countries or states) is connected and does not have separate islands.
+
+In this example, we will apply the **Four Color Theorem** to color a map of the **USA states** so that no two neighboring states have the same color.
+
+### 🐍 Python Implementation
+
+```python
+import networkx as nx
+import matplotlib.pyplot as plt
+
+# Define USA state adjacency graph
+usa_map = nx.Graph()
+
+# Add edges (only a few as an example)
+borders = [
+    ("California", "Oregon"), ("California", "Nevada"), ("California", "Arizona"),
+    ("Nevada", "Oregon"), ("Nevada", "Idaho"), ("Nevada", "Utah"),
+    ("Arizona", "Utah"), ("Arizona", "New Mexico"),
+    ("New Mexico", "Texas"), ("Texas", "Oklahoma"), ("Texas", "Louisiana"),
+    ("Oklahoma", "Kansas"), ("Oklahoma", "Arkansas")
+]
+
+usa_map.add_edges_from(borders)
+
+# Get four-coloring using NetworkX's greedy algorithm with strategy
+color_map = nx.coloring.greedy_color(usa_map, strategy="largest_first")
+
+# Define colors
+colors = ["red", "blue", "green", "yellow"]
+node_colors = [colors[color_map[state] % 4] for state in usa_map.nodes]
+
+# Draw the map
+plt.figure(figsize=(8, 6))
+nx.draw(usa_map, with_labels=True, node_color=node_colors, node_size=3000, font_size=10, font_color="white")
+plt.show()
+```
+
+#### 🏗️ User-Defined Function Implementation
+
+```python
+import random
+
+def four_color_theorem(graph):
+    """ 🎨 Applies Four Color Theorem to a given graph representation of a map. """
+    colors = ["red", "blue", "green", "yellow"]
+    state_colors = {}
+
+    for state in graph:
+        # Get used colors by neighboring states
+        used_colors = {state_colors[neighbor] for neighbor in graph[state] if neighbor in state_colors}
+        
+        # Assign the first available color
+        for color in colors:
+            if color not in used_colors:
+                state_colors[state] = color
+                break
+
+    return state_colors
+
+# Example USA adjacency list
+usa_states = {
+    "California": ["Oregon", "Nevada", "Arizona"],
+    "Oregon": ["California", "Nevada"],
+    "Nevada": ["California", "Oregon", "Idaho", "Utah"],
+    "Arizona": ["California", "Utah", "New Mexico"],
+    "New Mexico": ["Arizona", "Texas"],
+    "Texas": ["New Mexico", "Oklahoma", "Louisiana"],
+    "Oklahoma": ["Texas", "Kansas", "Arkansas"]
+}
+
+# Apply the Four Color Theorem
+state_coloring = four_color_theorem(usa_states)
+
+# Display results
+for state, color in state_coloring.items():
+    print(f"🗺️ {state} -> {color}")
+```
