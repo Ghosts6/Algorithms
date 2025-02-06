@@ -442,7 +442,7 @@ vector<int> bfs(int start, const vector<vector<int>>& adjList) {
 
 ## 🏆 Greedy + Parity-based Search Algorithm
 
-<img src="[./Greedy_Algorithm.png](https://github.com/user-attachments/assets/5b1fb521-e6a0-4aa8-98b8-6c7d1d7e6336)" alt="Greedy Algorithm" width="400" height="400">
+<img src="Greedy_Algorithm.png](https://github.com/user-attachments/assets/5b1fb521-e6a0-4aa8-98b8-6c7d1d7e6336" alt="Greedy Algorithm" width="400" height="400">
 
 ### 📌 Introduction
 
