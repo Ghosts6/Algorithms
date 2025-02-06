@@ -442,7 +442,7 @@ vector<int> bfs(int start, const vector<vector<int>>& adjList) {
 
 ## 🏆 Greedy + Parity-based Search Algorithm
 
-<img src="./Greedy_Algorithm.png" alt="Greedy Algorithm" width="400" height="400">
+<img src="[./Greedy_Algorithm.png](https://github.com/user-attachments/assets/5b1fb521-e6a0-4aa8-98b8-6c7d1d7e6336)" alt="Greedy Algorithm" width="400" height="400">
 
 ### 📌 Introduction
 
@@ -493,7 +493,9 @@ find_cat_greedy()
 
 ## 🎨 Four Color Theorem
 
-<img src="./Four_Color_Theorem.jpg" alt="Four Color Theorem" width="400" height="400">
+<img src="https://github.com/user-attachments/assets/fd33ba31-9149-4288-b482-8c3ad35a280f" alt="Four Color Theorem" width="400" height="400">
+
+
 
 ### 📌 Introduction
 
