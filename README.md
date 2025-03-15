@@ -2,7 +2,48 @@
 
 # Algorithms
 
-## Binary Search ✔️
+## Big O and Time and Space Complexity
+
+Understanding the time and space complexity of algorithms is crucial for writing efficient code. The Big O notation is used to describe the performance of an algorithm in terms of the time it takes to run as a function of the input size. Here are some common complexities:
+
+- **O(1)**: Constant time
+- **O(log n)**: Logarithmic time
+- **O(n)**: Linear time
+- **O(n log n)**: Linearithmic time
+- **O(n^2)**: Quadratic time
+- **O(2^n)**: Exponential time
+- **O(n!)**: Factorial time
+
+## Types of Algorithms
+
+### Search Algorithms
+
+1. **Binary Search ✔️**
+2. **Jump Search 🏃**
+3. **Linear Search 🔍**
+
+### Sorting Algorithms
+
+1. **Bubble Sort 🍾**
+
+### Graph Algorithms
+
+1. **Dijkstra's Algorithm 🚀**
+2. **Breadth-First Search (BFS) 🧩**
+
+### Greedy Algorithms
+
+1. **Greedy + Parity-based Search Algorithm 🏆**
+
+### Other Algorithms
+
+1. **Four Color Theorem 🎨**
+
+---
+
+## Search Algorithms
+
+### Binary Search ✔️
 
 <img src="https://github.com/Ghosts6/search-name-in-arrays-with-binary-search-algorithm/assets/95994481/0eca835a-56ed-43d7-a0d1-59d24135fa4f" alt="BinarySearch" width="400" height="400">
 
@@ -97,7 +138,7 @@ int binary(string arr[],string Sname,int Size){
 
 ```
 
-## JumpsSearch🏃:
+### JumpsSearch🏃:
 
 <img src="https://github.com/Ghosts6/binary-search-algorithm/assets/95994481/3d5dc8e7-5800-44cd-824a-3287cca5f016" alt="JumpSearch" width="400" height="400">
 
@@ -157,7 +198,7 @@ int jump_search(int arr[], int x, int y) {
 }
 ```
 
-## LinerSearch🔍:
+### LinerSearch🔍:
 
 <img src="https://github.com/Ghosts6/binary-search-algorithm/assets/95994481/81d70870-c55e-47ed-86eb-f46e5f32a685" alt="LinearSearch" width="400" height="400">
 
@@ -202,7 +243,11 @@ int linear_search(int arr[], int x, int y){
 }
 ```
 
-## BubbleSort🍾:
+---
+
+## Sorting Algorithms
+
+### BubbleSort🍾:
 
 <img src="https://github.com/Ghosts6/searchAlgorithms/assets/95994481/7338a7d1-86d4-4697-80a8-420596350307" alt="BubbleSort" width="400" height="400">
 
@@ -255,7 +300,96 @@ void print_array(int arr[],int x){
 	}	
 }
 ```
-## Dijkstra🚀:
+
+### BinarySort 🖥️🔍  
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif" alt="BinarySort" width="400" height="400">  
+
+**Binary Sort (Merge Sort)** is a highly efficient sorting algorithm that works on the principle of **Divide and Conquer**. It recursively divides the array into smaller halves, sorts them, and then merges them back together in sorted order.  
+
+### Binary_sort.cpp  
+```cpp
+#include <iostream>
+using namespace std;
+
+void merge(int arr[], int left, int mid, int right) {
+    int n1 = mid - left + 1;
+    int n2 = right - mid;
+
+    int L[n1], R[n2];
+
+    for (int i = 0; i < n1; i++)
+        L[i] = arr[left + i];
+    for (int i = 0; i < n2; i++)
+        R[i] = arr[mid + 1 + i];
+
+    int i = 0, j = 0, k = left;
+    while (i < n1 && j < n2) {
+        if (L[i] <= R[j]) {
+            arr[k] = L[i];
+            i++;
+        } else {
+            arr[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+
+    while (i < n1) {
+        arr[k] = L[i];
+        i++;
+        k++;
+    }
+    while (j < n2) {
+        arr[k] = R[j];
+        j++;
+        k++;
+    }
+}
+
+void binarySort(int arr[], int left, int right) {
+    if (left < right) {
+        int mid = left + (right - left) / 2;
+        binarySort(arr, left, mid);
+        binarySort(arr, mid + 1, right);
+        merge(arr, left, mid, right);
+    }
+}
+
+void printArray(int arr[], int size) {
+    for (int i = 0; i < size; i++)
+        cout << arr[i] << " ";
+    cout << endl;
+}
+
+int main() {
+    int arr[] = {38, 27, 43, 3, 9, 82, 10};
+    int arr_size = sizeof(arr) / sizeof(arr[0]);
+
+    cout << "\t\t\t Binary Sort (Merge Sort) Algorithm \t\t\t\n";
+    cout << "Unsorted array: ";
+    printArray(arr, arr_size);
+
+    binarySort(arr, 0, arr_size - 1);
+
+    cout << "Sorted array: ";
+    printArray(arr, arr_size);
+    return 0;
+}
+```
+
+### 🔹 **Why Binary Sort (Merge Sort)?**
+✅ **Time Complexity:** `O(n log n)` (Much faster than Bubble Sort)  
+✅ **Stable Sort:** Maintains order of equal elements  
+✅ **Efficient for Large Datasets**  
+
+This **Binary Sort (Merge Sort)** is an optimal and widely used sorting algorithm in **computer science** due to its efficiency and reliability! 🚀  
+
+---
+
+## Graph Algorithms
+
+### Dijkstra🚀:
 
 <img src="https://github.com/Ghosts6/searchAlgorithms/assets/95994481/040b8c3e-730e-49bd-99df-a2237c7c48c8" alt="Dijkstra" width="400" height="400">
 
@@ -374,7 +508,7 @@ if __name__ == "__main__":
 
     dijkstra(graph, source)
 ```
-## 🧩 Breadth-First Search (BFS):
+### 🧩 Breadth-First Search (BFS):
 
 <img src="https://github.com/user-attachments/assets/63848a93-49a6-45ca-8566-55ced0d8ddd2" alt="BinaryFirstSearch" width="400" height="400">
 
@@ -440,7 +574,11 @@ vector<int> bfs(int start, const vector<vector<int>>& adjList) {
 }
 ```
 
-## 🏆 Greedy + Parity-based Search Algorithm
+---
+
+## Greedy Algorithms
+
+### 🏆 Greedy + Parity-based Search Algorithm
 
 <img src="https://github.com/user-attachments/assets/5b1fb521-e6a0-4aa8-98b8-6c7d1d7e6336" alt="Greedy Algorithm" width="400" height="400">
 
@@ -491,7 +629,11 @@ def find_cat_greedy(boxes=5, days=10):
 find_cat_greedy()
 ```
 
-## 🎨 Four Color Theorem
+---
+
+## Other algorithms
+
+### 🎨 Four Color Theorem
 
 <img src="https://github.com/user-attachments/assets/fd33ba31-9149-4288-b482-8c3ad35a280f" alt="Four Color Theorem" width="400" height="400">
 
