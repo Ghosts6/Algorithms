@@ -2,17 +2,67 @@
 
 # Algorithms
 
-## Big O and Time and Space Complexity
+# Big O, Big Ω, and Big Θ Notation  
 
-Understanding the time and space complexity of algorithms is crucial for writing efficient code. The Big O notation is used to describe the performance of an algorithm in terms of the time it takes to run as a function of the input size. Here are some common complexities:
+When analyzing algorithms, we use asymptotic notation to describe their performance in terms of time and space complexity. These notations help us understand how the algorithm scales with different input sizes.  
 
-- **O(1)**: Constant time
-- **O(log n)**: Logarithmic time
-- **O(n)**: Linear time
-- **O(n log n)**: Linearithmic time
-- **O(n^2)**: Quadratic time
-- **O(2^n)**: Exponential time
-- **O(n!)**: Factorial time
+### **Mathematical Definitions**  
+
+- **Big O (O) – Upper Bound (Worst Case):**  
+  - \( f(x) \) is **O(g(x))** if there exist positive constants **c** and **k** such that:  
+    \[
+    f(x) \leq c \cdot g(x), \quad \text{for all } x > k
+    \]  
+  - This represents the **worst-case scenario** for an algorithm.  
+
+- **Big Omega (Ω) – Lower Bound (Best Case):**  
+  - \( f(x) \) is **Ω(g(x))** if there exist positive constants **c** and **k** such that:  
+    \[
+    f(x) \geq c \cdot g(x), \quad \text{for all } x > k
+    \]  
+  - This represents the **best-case scenario** for an algorithm.  
+
+- **Big Theta (Θ) – Tight Bound (Average Case):**  
+  - \( f(x) \) is **Θ(g(x))** if there exist positive constants **c₁, c₂,** and **k** such that:  
+    \[
+    c_1 \cdot g(x) \leq f(x) \leq c_2 \cdot g(x), \quad \text{for all } x > k
+    \]  
+  - This means that the algorithm has the same growth rate in both **best-case and worst-case** scenarios.  
+
+---
+
+## Time Complexity Classes  
+
+Understanding time complexity is essential for writing efficient code. Below are common time complexities with their meanings:  
+
+| Complexity | Notation | Description |
+|------------|-----------|-------------|
+| **Constant** | O(1) | Runs in the same time regardless of input size. Example: accessing an array element by index. |
+| **Logarithmic** | O(log n) | Reduces the problem size in each step. Example: binary search. |
+| **Linear** | O(n) | Grows directly with input size. Example: iterating through an array. |
+| **Linearithmic** | O(n log n) | Common in efficient sorting algorithms like merge sort and quicksort (average case). |
+| **Quadratic** | O(n²) | Common in nested loops, like in bubble sort or selection sort. |
+| **Exponential** | O(2ⁿ) | Grows extremely fast, often found in recursive algorithms like brute-force subsets. |
+| **Factorial** | O(n!) | The worst possible complexity, usually seen in brute-force combinatorial problems (e.g., traveling salesman problem). |
+
+---
+
+## **Time Complexity of Common Algorithms**  
+
+| Algorithm | Best Case (Ω) | Average Case (Θ) | Worst Case (O) |
+|------------|--------------|------------------|----------------|
+| **Binary Search (Logarithmic Search)** | Ω(1) | Θ(log n) | O(log n) |
+| **Linear Search** | Ω(1) | Θ(n) | O(n) |
+| **Jump Search** | Ω(1) | Θ(√n) | O(√n) |
+| **Bubble Sort** | Ω(n) | Θ(n²) | O(n²) |
+| **Dijkstra’s Algorithm** | Ω(V log V) | Θ((V + E) log V) | O((V + E) log V) |
+| **Breadth-First Search (BFS)** | Ω(V) | Θ(V + E) | O(V + E) |
+
+**Legend:**  
+- **V** = Number of vertices (nodes) in the graph  
+- **E** = Number of edges in the graph  
+
+---
 
 ## Types of Algorithms
 
@@ -242,6 +292,71 @@ int linear_search(int arr[], int x, int y){
     return -1;
 }
 ```
+
+## **Insertion Sort 🃏**  
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif" alt="Insertion Sort Visualization" width="400" height="400">  
+
+Insertion sort is a simple and efficient sorting algorithm that works similarly to how we sort playing cards in our hands. It builds the sorted array one element at a time by taking the next element and inserting it into its correct position among the previously sorted elements.  
+
+### **How It Works:**  
+1. Start from the second element (index 1) and compare it with the previous element.  
+2. If the previous element is larger, shift it to the right.  
+3. Continue shifting elements until the correct position for the current element is found.  
+4. Repeat the process for all elements in the array.  
+
+Insertion Sort is **adaptive**, meaning it performs well on nearly sorted data. However, it becomes inefficient for large datasets compared to more advanced sorting algorithms like **Merge Sort** or **Quick Sort**.  
+
+### **Time Complexity:**  
+| Best Case (Ω) | Average Case (Θ) | Worst Case (O) |
+|--------------|------------------|----------------|
+| Ω(n) | Θ(n²) | O(n²) |
+
+- Best case occurs when the array is **already sorted**: **O(n)**  
+- Worst case occurs when the array is **sorted in reverse order**: **O(n²)**  
+- Average case is **O(n²)** due to the nested loop structure  
+
+---
+
+### **insertion_sort.cpp**  
+
+```cpp
+#include <iostream>
+using namespace std;
+
+void insertion_sort(int arr[], int n) {
+    for (int i = 1; i < n; i++) {
+        int key = arr[i];
+        int j = i - 1;
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = key;
+    }
+}
+
+void print_array(int arr[], int n) {
+    for (int i = 0; i < n; i++)
+        cout << arr[i] << " ";
+    cout << endl;
+}
+
+int main() {
+    int arr[] = {8, 4, 1, 3, 5, 2, 6, 7};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    cout << "Original array:\n";
+    print_array(arr, n);
+
+    insertion_sort(arr, n);
+
+    cout << "Sorted array:\n";
+    print_array(arr, n);
+
+    return 0;
+}
+```  
 
 ---
 
