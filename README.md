@@ -9,24 +9,24 @@ When analyzing algorithms, we use asymptotic notation to describe their performa
 ### **Mathematical Definitions**  
 
 - **Big O (O) – Upper Bound (Worst Case):**  
-  - \( f(x) \) is **O(g(x))** if there exist positive constants **c** and **k** such that:  
-    \[
-    f(x) \leq c \cdot g(x), \quad \text{for all } x > k
-    \]  
+  - `f(x) is O(g(x)) if there exist positive constants c and k such that:`  
+    ```
+    f(x) ≤ c ⋅ g(x),   for all x > k
+    ```
   - This represents the **worst-case scenario** for an algorithm.  
 
 - **Big Omega (Ω) – Lower Bound (Best Case):**  
-  - \( f(x) \) is **Ω(g(x))** if there exist positive constants **c** and **k** such that:  
-    \[
-    f(x) \geq c \cdot g(x), \quad \text{for all } x > k
-    \]  
+  - `f(x) is Ω(g(x)) if there exist positive constants c and k such that:`  
+    ```
+    f(x) ≥ c ⋅ g(x),   for all x > k
+    ```
   - This represents the **best-case scenario** for an algorithm.  
 
 - **Big Theta (Θ) – Tight Bound (Average Case):**  
-  - \( f(x) \) is **Θ(g(x))** if there exist positive constants **c₁, c₂,** and **k** such that:  
-    \[
-    c_1 \cdot g(x) \leq f(x) \leq c_2 \cdot g(x), \quad \text{for all } x > k
-    \]  
+  - `f(x) is Θ(g(x)) if there exist positive constants c₁, c₂, and k such that:`  
+    ```
+    c₁ ⋅ g(x) ≤ f(x) ≤ c₂ ⋅ g(x),   for all x > k
+    ```
   - This means that the algorithm has the same growth rate in both **best-case and worst-case** scenarios.  
 
 ---
@@ -63,31 +63,82 @@ Understanding time complexity is essential for writing efficient code. Below are
 - **E** = Number of edges in the graph  
 
 ---
+## 🚀 Introduction to Algorithms  
 
-## Types of Algorithms
+### 📌 What is an Algorithm?  
+An **algorithm** is a **finite set of precise instructions** for solving a problem or performing a computation.  
+It provides a step-by-step procedure to transform **input** into **output** efficiently.  
 
-### Search Algorithms
+---
 
-1. **Binary Search ✔️**
-2. **Jump Search 🏃**
-3. **Linear Search 🔍**
+### 🔹 Properties of an Algorithm  
 
-### Sorting Algorithms
+For a set of instructions to be considered an algorithm, it must satisfy the following properties:  
 
-1. **Bubble Sort 🍾**
+1. **📥 Input** – The algorithm must take at least one well-defined input.  
+2. **📤 Output** – It must produce at least one well-defined output.  
+3. **✅ Correctness** – The output should be correct for all valid inputs.  
+4. **🔄 Finiteness** – The algorithm must complete after a finite number of steps.  
+5. **⚡ Effectiveness** – Each step of the algorithm must be simple and executable within a finite amount of time.  
+6. **🌍 Generality** – The algorithm should solve a **general** class of problems, not just a specific case.  
 
-### Graph Algorithms
+---
 
-1. **Dijkstra's Algorithm 🚀**
-2. **Breadth-First Search (BFS) 🧩**
+### 🔎 Types of Problems Solved by Algorithms  
 
-### Greedy Algorithms
+Algorithms are designed to solve different types of problems, including:  
 
-1. **Greedy + Parity-based Search Algorithm 🏆**
+1. **🔍 Search Problems** – Finding an item in a dataset (e.g., Binary Search, Linear Search).  
+2. **🔢 Sorting Problems** – Arranging data in a specific order (e.g., Quick Sort, Merge Sort).  
+3. **🏆 Optimization Problems** – Finding the best solution among many (e.g., Dijkstra’s Algorithm, Dynamic Programming).  
 
-### Other Algorithms
+---
 
-1. **Four Color Theorem 🎨**
+## 🔥 Types of Algorithms  
+
+Algorithms can be classified based on their working principles:  
+
+### ⚡ 1. Brute Force Algorithms (Straightforward Approach)  
+- Solves problems by checking all possible solutions.  
+- **Example:** 🛠️ Naïve string matching, 🫧 Bubble Sort.  
+
+### 🔎 2. Search Algorithms  
+- Used to find elements within a dataset.  
+- **Examples:**  
+  - **📍 Binary Search** ✔️  
+  - **🏃 Jump Search**  
+  - **🔍 Linear Search**  
+
+### 🔢 3. Sorting Algorithms  
+- Organize elements in a particular order (ascending or descending).  
+- **Examples:**  
+  - **🍾 Bubble Sort**  
+  - **⚡ Merge Sort**  
+  - **🔥 Quick Sort**  
+
+### 🔗 4. Graph Algorithms  
+- Solve problems related to graphs (nodes and edges).  
+- **Examples:**  
+  - **🚀 Dijkstra's Algorithm** (Shortest Path)  
+  - **🧩 Breadth-First Search (BFS)** (Graph Traversal)  
+  - **🔎 Depth-First Search (DFS)**  
+
+### 🏆 5. Greedy Algorithms  
+- Make the locally optimal choice at each step.  
+- **Examples:**  
+  - **🚀 Dijkstra's Algorithm** (also classified as Greedy)  
+  - **🔄 Greedy + Parity-based Search Algorithm**  
+  - **🔗 Kruskal's Algorithm** (for Minimum Spanning Trees)  
+
+### 📈 6. Dynamic Programming Algorithms  
+- Solve problems by breaking them down into overlapping subproblems.  
+- **Examples:**  
+  - **🔢 Fibonacci Sequence using DP**  
+  - **🎒 Knapsack Problem**  
+  - **🔠 Longest Common Subsequence (LCS)**  
+
+### 🎨 7. Other Algorithms  
+- **🖍️ Four Color Theorem** (Graph Coloring)  
 
 ---
 
