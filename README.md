@@ -344,7 +344,11 @@ int linear_search(int arr[], int x, int y){
 }
 ```
 
-## **Insertion Sort 🃏**  
+---
+
+## Sorting Algorithms
+
+### **Insertion Sort 🃏**  
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif" alt="Insertion Sort Visualization" width="400" height="400">  
 
@@ -411,8 +415,6 @@ int main() {
 
 ---
 
-## Sorting Algorithms
-
 ### BubbleSort🍾:
 
 <img src="https://github.com/Ghosts6/searchAlgorithms/assets/95994481/7338a7d1-86d4-4697-80a8-420596350307" alt="BubbleSort" width="400" height="400">
@@ -467,7 +469,7 @@ void print_array(int arr[],int x){
 }
 ```
 
-### BinarySort 🖥️🔍  
+### BinarySort(Merge Sort) 🖥️🔍  
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif" alt="BinarySort" width="400" height="400">  
 
@@ -542,6 +544,59 @@ int main() {
     printArray(arr, arr_size);
     return 0;
 }
+```
+
+### BinarySort.py
+```py
+class MergeSort:
+    """Class implementation of Merge Sort algorithm."""
+
+    def merge(self, arr, left, mid, right):
+        left_half = arr[left:mid + 1]
+        right_half = arr[mid + 1:right + 1]
+
+        i = j = 0
+        k = left
+
+        while i < len(left_half) and j < len(right_half):
+            if left_half[i] <= right_half[j]:
+                arr[k] = left_half[i]
+                i += 1
+            else:
+                arr[k] = right_half[j]
+                j += 1
+            k += 1
+
+        while i < len(left_half):
+            arr[k] = left_half[i]
+            i += 1
+            k += 1
+
+        while j < len(right_half):
+            arr[k] = right_half[j]
+            j += 1
+            k += 1
+
+    def merge_sort(self, arr, left, right):
+        if left < right:
+            mid = (left + right) // 2
+            self.merge_sort(arr, left, mid)
+            self.merge_sort(arr, mid + 1, right)
+            self.merge(arr, left, mid, right)
+
+    def sort(self, arr):
+        self.merge_sort(arr, 0, len(arr) - 1)
+        return arr
+
+
+# Example usage
+if __name__ == "__main__":
+    arr = [38, 27, 43, 3, 9, 82, 10]
+    print("Unsorted array:", arr)
+
+    sorter = MergeSort()
+    sorted_arr = sorter.sort(arr)
+    print("Sorted array:", sorted_arr)
 ```
 
 ### 🔹 **Why Binary Sort (Merge Sort)?**
