@@ -96,49 +96,77 @@ Algorithms are designed to solve different types of problems, including:
 
 ## 🔥 Types of Algorithms  
 
-Algorithms can be classified based on their working principles:  
+Algorithms can be categorized based on their design paradigms and problem-solving strategies:
+
+---
 
 ### ⚡ 1. Brute Force Algorithms (Straightforward Approach)  
-- Solves problems by checking all possible solutions.  
-- **Example:** 🛠️ Naïve string matching, 🫧 Bubble Sort.  
+- Explore all possible solutions to find the correct one.  
+- **Examples:**  
+  - 🛠️ Naïve String Matching  
+  - 🫧 Bubble Sort  
+
+---
 
 ### 🔎 2. Search Algorithms  
-- Used to find elements within a dataset.  
+- Used to locate specific elements within a dataset.  
 - **Examples:**  
-  - **📍 Binary Search** ✔️  
-  - **🏃 Jump Search**  
-  - **🔍 Linear Search**  
+  - 📍 Binary Search ✔️  
+  - 🏃 Jump Search  
+  - 🔍 Linear Search  
+
+---
 
 ### 🔢 3. Sorting Algorithms  
-- Organize elements in a particular order (ascending or descending).  
+- Arrange elements in a specific order (ascending/descending).  
 - **Examples:**  
-  - **🍾 Bubble Sort**  
-  - **⚡ Merge Sort**  
-  - **🔥 Quick Sort**  
+  - 🍾 Bubble Sort  
+  - ⚡ Merge Sort  
+  - 🔥 Quick Sort  
 
-### 🔗 4. Graph Algorithms  
-- Solve problems related to graphs (nodes and edges).  
+---
+
+### 🧠 4. Divide and Conquer Algorithms  
+- Break the problem into smaller subproblems, solve them independently, and combine the results.  
+- Highly efficient for many computational problems.  
 - **Examples:**  
-  - **🚀 Dijkstra's Algorithm** (Shortest Path)  
-  - **🧩 Breadth-First Search (BFS)** (Graph Traversal)  
-  - **🔎 Depth-First Search (DFS)**  
+  - 🧩 Merge Sort  
+  - 🎯 Quick Sort  
+  - 🧮 Binary Search  
 
-### 🏆 5. Greedy Algorithms  
-- Make the locally optimal choice at each step.  
+---
+
+### 🔗 5. Graph Algorithms  
+- Deal with graph data structures (nodes and edges).  
 - **Examples:**  
-  - **🚀 Dijkstra's Algorithm** (also classified as Greedy)  
-  - **🔄 Greedy + Parity-based Search Algorithm**  
-  - **🔗 Kruskal's Algorithm** (for Minimum Spanning Trees)  
+  - 🚀 Dijkstra's Algorithm (Shortest Path)  
+  - 🧩 Breadth-First Search (BFS)  
+  - 🔎 Depth-First Search (DFS)  
 
-### 📈 6. Dynamic Programming Algorithms  
-- Solve problems by breaking them down into overlapping subproblems.  
+---
+
+### 🏆 6. Greedy Algorithms  
+- Make the optimal choice at each step with the hope of finding the global optimum.  
 - **Examples:**  
-  - **🔢 Fibonacci Sequence using DP**  
-  - **🎒 Knapsack Problem**  
-  - **🔠 Longest Common Subsequence (LCS)**  
+  - 🚀 Dijkstra's Algorithm *(also Greedy)*  
+  - 🔁 Greedy + Parity-based Search  
+  - 🔗 Kruskal's Algorithm (Minimum Spanning Tree)  
 
-### 🎨 7. Other Algorithms  
-- **🖍️ Four Color Theorem** (Graph Coloring)  
+---
+
+### 📈 7. Dynamic Programming (DP) Algorithms  
+- Solve complex problems by breaking them down into overlapping subproblems and storing their results.  
+- **Examples:**  
+  - 🔢 Fibonacci Sequence (DP approach)  
+  - 🎒 Knapsack Problem  
+  - 🔠 Longest Common Subsequence (LCS)  
+
+---
+
+### 🎨 8. Other Algorithms  
+- Unique or specialized algorithms that don't fit neatly into the above categories.  
+- **Example:**  
+  - 🖍️ Four Color Theorem (Graph Coloring)
 
 ---
 
